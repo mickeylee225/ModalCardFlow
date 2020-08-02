@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70C86E1F24D74121001B82C2 /* ModalCardFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C86E1D24D74121001B82C2 /* ModalCardFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70C86E2724D74303001B82C2 /* ModalCardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2624D74303001B82C2 /* ModalCardFlow.swift */; };
+		70C86E2924D74353001B82C2 /* ModalCardFlowContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2824D74353001B82C2 /* ModalCardFlowContaining.swift */; };
+		70C86E2B24D743A7001B82C2 /* ModalCardConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2A24D743A7001B82C2 /* ModalCardConfig.swift */; };
+		70C86E2D24D743E3001B82C2 /* ModalCardAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2C24D743E3001B82C2 /* ModalCardAnimationType.swift */; };
+		70C86E2F24D7440B001B82C2 /* ModalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2E24D7440B001B82C2 /* ModalCard.swift */; };
+		70C86E3124D7447F001B82C2 /* ModalCardFlowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E3024D7447F001B82C2 /* ModalCardFlowContainer.swift */; };
+		70C86E3324D745AE001B82C2 /* ModalCardFlowContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70C86E3224D745AE001B82C2 /* ModalCardFlowContainer.xib */; };
+		70C86E3D24D74603001B82C2 /* ModalCardFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C86E1A24D74121001B82C2 /* ModalCardFlow.framework */; platformFilter = ios; };
+		70C86E4524D754D9001B82C2 /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4424D754D9001B82C2 /* MockClasses.swift */; };
+		70C86E4724D7553F001B82C2 /* ModalCardFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4624D7553F001B82C2 /* ModalCardFlowTests.swift */; };
+		70C86E4924D75573001B82C2 /* ModalCardFlowContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */; };
+		70C86E4B24D75617001B82C2 /* ModalCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4A24D75617001B82C2 /* ModalCardTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70C86E3E24D74603001B82C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70C86E1124D74121001B82C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70C86E1924D74121001B82C2;
+			remoteInfo = ModalCardFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70C86E1A24D74121001B82C2 /* ModalCardFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModalCardFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C86E1D24D74121001B82C2 /* ModalCardFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalCardFlow.h; sourceTree = "<group>"; };
+		70C86E1E24D74121001B82C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70C86E2624D74303001B82C2 /* ModalCardFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlow.swift; sourceTree = "<group>"; };
+		70C86E2824D74353001B82C2 /* ModalCardFlowContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowContaining.swift; sourceTree = "<group>"; };
+		70C86E2A24D743A7001B82C2 /* ModalCardConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardConfig.swift; sourceTree = "<group>"; };
+		70C86E2C24D743E3001B82C2 /* ModalCardAnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardAnimationType.swift; sourceTree = "<group>"; };
+		70C86E2E24D7440B001B82C2 /* ModalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCard.swift; sourceTree = "<group>"; };
+		70C86E3024D7447F001B82C2 /* ModalCardFlowContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowContainer.swift; sourceTree = "<group>"; };
+		70C86E3224D745AE001B82C2 /* ModalCardFlowContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalCardFlowContainer.xib; sourceTree = "<group>"; };
+		70C86E3824D74603001B82C2 /* ModalCardFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalCardFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C86E3C24D74603001B82C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70C86E4324D754D9001B82C2 /* ModalCardFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModalCardFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		70C86E4424D754D9001B82C2 /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClasses.swift; sourceTree = "<group>"; };
+		70C86E4624D7553F001B82C2 /* ModalCardFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowTests.swift; sourceTree = "<group>"; };
+		70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowContainerTests.swift; sourceTree = "<group>"; };
+		70C86E4A24D75617001B82C2 /* ModalCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70C86E1724D74121001B82C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C86E3524D74603001B82C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C86E3D24D74603001B82C2 /* ModalCardFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70C86E1024D74121001B82C2 = {
+			isa = PBXGroup;
+			children = (
+				70C86E1C24D74121001B82C2 /* ModalCardFlow */,
+				70C86E3924D74603001B82C2 /* ModalCardFlowTests */,
+				70C86E1B24D74121001B82C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70C86E1B24D74121001B82C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70C86E1A24D74121001B82C2 /* ModalCardFlow.framework */,
+				70C86E3824D74603001B82C2 /* ModalCardFlowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70C86E1C24D74121001B82C2 /* ModalCardFlow */ = {
+			isa = PBXGroup;
+			children = (
+				70C86E1D24D74121001B82C2 /* ModalCardFlow.h */,
+				70C86E1E24D74121001B82C2 /* Info.plist */,
+				70C86E2624D74303001B82C2 /* ModalCardFlow.swift */,
+				70C86E2E24D7440B001B82C2 /* ModalCard.swift */,
+				70C86E2A24D743A7001B82C2 /* ModalCardConfig.swift */,
+				70C86E2C24D743E3001B82C2 /* ModalCardAnimationType.swift */,
+				70C86E2824D74353001B82C2 /* ModalCardFlowContaining.swift */,
+				70C86E3024D7447F001B82C2 /* ModalCardFlowContainer.swift */,
+				70C86E3224D745AE001B82C2 /* ModalCardFlowContainer.xib */,
+			);
+			path = ModalCardFlow;
+			sourceTree = "<group>";
+		};
+		70C86E3924D74603001B82C2 /* ModalCardFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				70C86E3C24D74603001B82C2 /* Info.plist */,
+				70C86E4324D754D9001B82C2 /* ModalCardFlowTests-Bridging-Header.h */,
+				70C86E4424D754D9001B82C2 /* MockClasses.swift */,
+				70C86E4624D7553F001B82C2 /* ModalCardFlowTests.swift */,
+				70C86E4A24D75617001B82C2 /* ModalCardTests.swift */,
+				70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */,
+			);
+			path = ModalCardFlowTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70C86E1524D74121001B82C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C86E1F24D74121001B82C2 /* ModalCardFlow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70C86E1924D74121001B82C2 /* ModalCardFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70C86E2224D74121001B82C2 /* Build configuration list for PBXNativeTarget "ModalCardFlow" */;
+			buildPhases = (
+				70C86E1524D74121001B82C2 /* Headers */,
+				70C86E1624D74121001B82C2 /* Sources */,
+				70C86E1724D74121001B82C2 /* Frameworks */,
+				70C86E1824D74121001B82C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModalCardFlow;
+			productName = ModalCardFlow;
+			productReference = 70C86E1A24D74121001B82C2 /* ModalCardFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		70C86E3724D74603001B82C2 /* ModalCardFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70C86E4024D74603001B82C2 /* Build configuration list for PBXNativeTarget "ModalCardFlowTests" */;
+			buildPhases = (
+				70C86E3424D74603001B82C2 /* Sources */,
+				70C86E3524D74603001B82C2 /* Frameworks */,
+				70C86E3624D74603001B82C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70C86E3F24D74603001B82C2 /* PBXTargetDependency */,
+			);
+			name = ModalCardFlowTests;
+			productName = ModalCardFlowTests;
+			productReference = 70C86E3824D74603001B82C2 /* ModalCardFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70C86E1124D74121001B82C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Mickey Lee";
+				TargetAttributes = {
+					70C86E1924D74121001B82C2 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+					70C86E3724D74603001B82C2 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+				};
+			};
+			buildConfigurationList = 70C86E1424D74121001B82C2 /* Build configuration list for PBXProject "ModalCardFlow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70C86E1024D74121001B82C2;
+			productRefGroup = 70C86E1B24D74121001B82C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70C86E1924D74121001B82C2 /* ModalCardFlow */,
+				70C86E3724D74603001B82C2 /* ModalCardFlowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70C86E1824D74121001B82C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C86E3324D745AE001B82C2 /* ModalCardFlowContainer.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C86E3624D74603001B82C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70C86E1624D74121001B82C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C86E2D24D743E3001B82C2 /* ModalCardAnimationType.swift in Sources */,
+				70C86E3124D7447F001B82C2 /* ModalCardFlowContainer.swift in Sources */,
+				70C86E2724D74303001B82C2 /* ModalCardFlow.swift in Sources */,
+				70C86E2924D74353001B82C2 /* ModalCardFlowContaining.swift in Sources */,
+				70C86E2F24D7440B001B82C2 /* ModalCard.swift in Sources */,
+				70C86E2B24D743A7001B82C2 /* ModalCardConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C86E3424D74603001B82C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C86E4924D75573001B82C2 /* ModalCardFlowContainerTests.swift in Sources */,
+				70C86E4B24D75617001B82C2 /* ModalCardTests.swift in Sources */,
+				70C86E4524D754D9001B82C2 /* MockClasses.swift in Sources */,
+				70C86E4724D7553F001B82C2 /* ModalCardFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70C86E3F24D74603001B82C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 70C86E1924D74121001B82C2 /* ModalCardFlow */;
+			targetProxy = 70C86E3E24D74603001B82C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		70C86E2024D74121001B82C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70C86E2124D74121001B82C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		70C86E2324D74121001B82C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ModalCardFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlow;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		70C86E2424D74121001B82C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ModalCardFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlow;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		70C86E4124D74603001B82C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModalCardFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModalCardFlowTests/ModalCardFlowTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70C86E4224D74603001B82C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModalCardFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModalCardFlowTests/ModalCardFlowTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70C86E1424D74121001B82C2 /* Build configuration list for PBXProject "ModalCardFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C86E2024D74121001B82C2 /* Debug */,
+				70C86E2124D74121001B82C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70C86E2224D74121001B82C2 /* Build configuration list for PBXNativeTarget "ModalCardFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C86E2324D74121001B82C2 /* Debug */,
+				70C86E2424D74121001B82C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70C86E4024D74603001B82C2 /* Build configuration list for PBXNativeTarget "ModalCardFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C86E4124D74603001B82C2 /* Debug */,
+				70C86E4224D74603001B82C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70C86E1124D74121001B82C2 /* Project object */;
+}
