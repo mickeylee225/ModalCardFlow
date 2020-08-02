@@ -17,17 +17,16 @@ Pod::Spec.new do |spec|
 
   spec.name         = "ModalCardFlow"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of ModalCardFlow."
+  spec.summary      = "A Swift library to setup card views and the card view flow"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "The UI framework allows any view controllers are able to start the flow of card views and pass context within flow."
 
-  spec.homepage     = "http://EXAMPLE/ModalCardFlow"
+  spec.homepage     = "https://github.com/michilin/ModalCardFlow"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -63,8 +62,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  # spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -90,10 +89,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "ModalCardFlow/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "ModalCardFlow/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
