@@ -1,6 +1,8 @@
 # ModalCardFlow
 A Swift library allows any view controllers are able to start the flow of card views and pass context within flow.
 
+![](demo.gif)
+
 ## Usage
 1. Create  a context class and conform it to the protocol `Context`.
 ```

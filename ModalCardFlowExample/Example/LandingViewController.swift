@@ -17,7 +17,8 @@ class LandingViewController: UIViewController {
 
     @IBAction func startButtonClicked(_ sender: Any) {
         let context = ExampleContext()
-        let flow = ModalCardFlowFactory.makeFlow(context: context, with: ModalCardConfig())
+        let config = ModalCardConfig(containerRadius: 10)
+        let flow = ModalCardFlowFactory.makeFlow(context: context, with: config)
         let parentCard = ParentCard()
         flow.start(with: parentCard, andPresentOn: navigationController)
     }
