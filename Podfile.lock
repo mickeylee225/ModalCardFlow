@@ -1,0 +1,16 @@
+PODS:
+  - ModalCardFlow (0.0.1)
+
+DEPENDENCIES:
+  - ModalCardFlow (from `.`)
+
+EXTERNAL SOURCES:
+  ModalCardFlow:
+    :path: "."
+
+SPEC CHECKSUMS:
+  ModalCardFlow: f8fb3f675b6e17ced822fc25a668729e49ae5048
+
+PODFILE CHECKSUM: 325ad97525514d6fb7f527e5d65f579469ed935b
+
+COCOAPODS: 1.9.3

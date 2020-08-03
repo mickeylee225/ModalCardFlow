@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ModalCardFlow"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "A Swift library to setup card views and the card view flow"
 
   # This description is used to generate tags and improve search results.

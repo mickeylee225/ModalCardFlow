@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48C80E6A42409A639968DD6C /* Pods_ModalCardFlowExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9EAE41A475A7A37639E1B8 /* Pods_ModalCardFlowExample.framework */; };
 		70C86E1F24D74121001B82C2 /* ModalCardFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C86E1D24D74121001B82C2 /* ModalCardFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C86E2724D74303001B82C2 /* ModalCardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2624D74303001B82C2 /* ModalCardFlow.swift */; };
 		70C86E2924D74353001B82C2 /* ModalCardFlowContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E2824D74353001B82C2 /* ModalCardFlowContaining.swift */; };
@@ -20,6 +21,17 @@
 		70C86E4724D7553F001B82C2 /* ModalCardFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4624D7553F001B82C2 /* ModalCardFlowTests.swift */; };
 		70C86E4924D75573001B82C2 /* ModalCardFlowContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */; };
 		70C86E4B24D75617001B82C2 /* ModalCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C86E4A24D75617001B82C2 /* ModalCardTests.swift */; };
+		70E21B2424D7F8780052E7E7 /* ExampleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21B2324D7F8780052E7E7 /* ExampleContext.swift */; };
+		70E21B2624D7F8A20052E7E7 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21B2524D7F8A20052E7E7 /* LandingViewController.swift */; };
+		70E21B2824D7F8D00052E7E7 /* ModalCardFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21B2724D7F8D00052E7E7 /* ModalCardFlowFactory.swift */; };
+		70E21B2A24D7F95D0052E7E7 /* ParentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21B2924D7F95D0052E7E7 /* ParentCard.swift */; };
+		70E21B2C24D7F9730052E7E7 /* ChildCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21B2B24D7F9730052E7E7 /* ChildCard.swift */; };
+		70E21B3024D7F9AF0052E7E7 /* ChildCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E21B2D24D7F9AF0052E7E7 /* ChildCard.xib */; };
+		70E21B3124D7F9AF0052E7E7 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E21B2E24D7F9AF0052E7E7 /* LandingViewController.xib */; };
+		70E21B3224D7F9AF0052E7E7 /* ParentCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E21B2F24D7F9AF0052E7E7 /* ParentCard.xib */; };
+		70E9B72824D7F5D4003D8385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9B72724D7F5D4003D8385 /* AppDelegate.swift */; };
+		70E9B73124D7F5D9003D8385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E9B73024D7F5D9003D8385 /* Assets.xcassets */; };
+		70E9B73424D7F5D9003D8385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E9B73224D7F5D9003D8385 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +62,22 @@
 		70C86E4624D7553F001B82C2 /* ModalCardFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowTests.swift; sourceTree = "<group>"; };
 		70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowContainerTests.swift; sourceTree = "<group>"; };
 		70C86E4A24D75617001B82C2 /* ModalCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardTests.swift; sourceTree = "<group>"; };
+		70E21B2324D7F8780052E7E7 /* ExampleContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleContext.swift; sourceTree = "<group>"; };
+		70E21B2524D7F8A20052E7E7 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		70E21B2724D7F8D00052E7E7 /* ModalCardFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCardFlowFactory.swift; sourceTree = "<group>"; };
+		70E21B2924D7F95D0052E7E7 /* ParentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCard.swift; sourceTree = "<group>"; };
+		70E21B2B24D7F9730052E7E7 /* ChildCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCard.swift; sourceTree = "<group>"; };
+		70E21B2D24D7F9AF0052E7E7 /* ChildCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildCard.xib; sourceTree = "<group>"; };
+		70E21B2E24D7F9AF0052E7E7 /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		70E21B2F24D7F9AF0052E7E7 /* ParentCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentCard.xib; sourceTree = "<group>"; };
+		70E9B72524D7F5D4003D8385 /* ModalCardFlowExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalCardFlowExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E9B72724D7F5D4003D8385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70E9B73024D7F5D9003D8385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70E9B73324D7F5D9003D8385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70E9B73524D7F5D9003D8385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C76426B02D4989627D1A3F3 /* Pods-ModalCardFlowExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalCardFlowExample.release.xcconfig"; path = "Target Support Files/Pods-ModalCardFlowExample/Pods-ModalCardFlowExample.release.xcconfig"; sourceTree = "<group>"; };
+		9109E6A27DB485588848F3AB /* Pods-ModalCardFlowExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalCardFlowExample.debug.xcconfig"; path = "Target Support Files/Pods-ModalCardFlowExample/Pods-ModalCardFlowExample.debug.xcconfig"; sourceTree = "<group>"; };
+		ED9EAE41A475A7A37639E1B8 /* Pods_ModalCardFlowExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModalCardFlowExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +96,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70E9B72224D7F5D4003D8385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C80E6A42409A639968DD6C /* Pods_ModalCardFlowExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0821FA3670FA60E7C1BB62C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9109E6A27DB485588848F3AB /* Pods-ModalCardFlowExample.debug.xcconfig */,
+				8C76426B02D4989627D1A3F3 /* Pods-ModalCardFlowExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		70C86E1024D74121001B82C2 = {
 			isa = PBXGroup;
 			children = (
 				70C86E1C24D74121001B82C2 /* ModalCardFlow */,
 				70C86E3924D74603001B82C2 /* ModalCardFlowTests */,
+				70E9B72624D7F5D4003D8385 /* ModalCardFlowExample */,
 				70C86E1B24D74121001B82C2 /* Products */,
+				0821FA3670FA60E7C1BB62C6 /* Pods */,
+				B431E15158C37559428FD244 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +133,7 @@
 			children = (
 				70C86E1A24D74121001B82C2 /* ModalCardFlow.framework */,
 				70C86E3824D74603001B82C2 /* ModalCardFlowTests.xctest */,
+				70E9B72524D7F5D4003D8385 /* ModalCardFlowExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +143,7 @@
 			children = (
 				70C86E1D24D74121001B82C2 /* ModalCardFlow.h */,
 				70C86E1E24D74121001B82C2 /* Info.plist */,
+				70E21B2724D7F8D00052E7E7 /* ModalCardFlowFactory.swift */,
 				70C86E2624D74303001B82C2 /* ModalCardFlow.swift */,
 				70C86E2E24D7440B001B82C2 /* ModalCard.swift */,
 				70C86E2A24D743A7001B82C2 /* ModalCardConfig.swift */,
@@ -116,6 +166,40 @@
 				70C86E4824D75573001B82C2 /* ModalCardFlowContainerTests.swift */,
 			);
 			path = ModalCardFlowTests;
+			sourceTree = "<group>";
+		};
+		70E21B2224D7F7CD0052E7E7 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				70E21B2324D7F8780052E7E7 /* ExampleContext.swift */,
+				70E21B2524D7F8A20052E7E7 /* LandingViewController.swift */,
+				70E21B2E24D7F9AF0052E7E7 /* LandingViewController.xib */,
+				70E21B2924D7F95D0052E7E7 /* ParentCard.swift */,
+				70E21B2F24D7F9AF0052E7E7 /* ParentCard.xib */,
+				70E21B2B24D7F9730052E7E7 /* ChildCard.swift */,
+				70E21B2D24D7F9AF0052E7E7 /* ChildCard.xib */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		70E9B72624D7F5D4003D8385 /* ModalCardFlowExample */ = {
+			isa = PBXGroup;
+			children = (
+				70E21B2224D7F7CD0052E7E7 /* Example */,
+				70E9B72724D7F5D4003D8385 /* AppDelegate.swift */,
+				70E9B73024D7F5D9003D8385 /* Assets.xcassets */,
+				70E9B73224D7F5D9003D8385 /* LaunchScreen.storyboard */,
+				70E9B73524D7F5D9003D8385 /* Info.plist */,
+			);
+			path = ModalCardFlowExample;
+			sourceTree = "<group>";
+		};
+		B431E15158C37559428FD244 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED9EAE41A475A7A37639E1B8 /* Pods_ModalCardFlowExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +252,24 @@
 			productReference = 70C86E3824D74603001B82C2 /* ModalCardFlowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		70E9B72424D7F5D4003D8385 /* ModalCardFlowExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E9B73624D7F5D9003D8385 /* Build configuration list for PBXNativeTarget "ModalCardFlowExample" */;
+			buildPhases = (
+				CCDE51BE2D8FF7ED002E29C7 /* [CP] Check Pods Manifest.lock */,
+				70E9B72124D7F5D4003D8385 /* Sources */,
+				70E9B72224D7F5D4003D8385 /* Frameworks */,
+				70E9B72324D7F5D4003D8385 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModalCardFlowExample;
+			productName = ModalCardFlowExample;
+			productReference = 70E9B72524D7F5D4003D8385 /* ModalCardFlowExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +288,9 @@
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
 					};
+					70E9B72424D7F5D4003D8385 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 				};
 			};
 			buildConfigurationList = 70C86E1424D74121001B82C2 /* Build configuration list for PBXProject "ModalCardFlow" */;
@@ -203,6 +308,7 @@
 			targets = (
 				70C86E1924D74121001B82C2 /* ModalCardFlow */,
 				70C86E3724D74603001B82C2 /* ModalCardFlowTests */,
+				70E9B72424D7F5D4003D8385 /* ModalCardFlowExample */,
 			);
 		};
 /* End PBXProject section */
@@ -223,7 +329,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70E9B72324D7F5D4003D8385 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E9B73424D7F5D9003D8385 /* LaunchScreen.storyboard in Resources */,
+				70E21B3224D7F9AF0052E7E7 /* ParentCard.xib in Resources */,
+				70E21B3024D7F9AF0052E7E7 /* ChildCard.xib in Resources */,
+				70E21B3124D7F9AF0052E7E7 /* LandingViewController.xib in Resources */,
+				70E9B73124D7F5D9003D8385 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCDE51BE2D8FF7ED002E29C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModalCardFlowExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70C86E1624D74121001B82C2 /* Sources */ = {
@@ -233,6 +376,7 @@
 				70C86E2D24D743E3001B82C2 /* ModalCardAnimationType.swift in Sources */,
 				70C86E3124D7447F001B82C2 /* ModalCardFlowContainer.swift in Sources */,
 				70C86E2724D74303001B82C2 /* ModalCardFlow.swift in Sources */,
+				70E21B2824D7F8D00052E7E7 /* ModalCardFlowFactory.swift in Sources */,
 				70C86E2924D74353001B82C2 /* ModalCardFlowContaining.swift in Sources */,
 				70C86E2F24D7440B001B82C2 /* ModalCard.swift in Sources */,
 				70C86E2B24D743A7001B82C2 /* ModalCardConfig.swift in Sources */,
@@ -250,6 +394,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70E9B72124D7F5D4003D8385 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E21B2424D7F8780052E7E7 /* ExampleContext.swift in Sources */,
+				70E21B2624D7F8A20052E7E7 /* LandingViewController.swift in Sources */,
+				70E9B72824D7F5D4003D8385 /* AppDelegate.swift in Sources */,
+				70E21B2C24D7F9730052E7E7 /* ChildCard.swift in Sources */,
+				70E21B2A24D7F95D0052E7E7 /* ParentCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,6 +416,17 @@
 			targetProxy = 70C86E3E24D74603001B82C2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70E9B73224D7F5D9003D8385 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70E9B73324D7F5D9003D8385 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		70C86E2024D74121001B82C2 /* Debug */ = {
@@ -393,6 +560,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ModalCardFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +587,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ModalCardFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,6 +641,44 @@
 			};
 			name = Release;
 		};
+		70E9B73724D7F5D9003D8385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9109E6A27DB485588848F3AB /* Pods-ModalCardFlowExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModalCardFlowExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlowExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		70E9B73824D7F5D9003D8385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C76426B02D4989627D1A3F3 /* Pods-ModalCardFlowExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModalCardFlowExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mickeylee.ModalCardFlowExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,6 +705,15 @@
 			buildConfigurations = (
 				70C86E4124D74603001B82C2 /* Debug */,
 				70C86E4224D74603001B82C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E9B73624D7F5D9003D8385 /* Build configuration list for PBXNativeTarget "ModalCardFlowExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E9B73724D7F5D9003D8385 /* Debug */,
+				70E9B73824D7F5D9003D8385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

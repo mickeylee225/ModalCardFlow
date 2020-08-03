@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParentCard" customModule="ModalViewPoC" customModuleProvider="target">
+            <connections>
+                <outlet property="quantityLabel" destination="wGv-f2-On2" id="ytv-Qc-o4e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMB-GG-Wht">
+                    <rect key="frame" x="8" y="82" width="398" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.26056187450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="cT6-GC-s6W"/>
+                    </constraints>
+                    <state key="normal" title="Choose quantity">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="S8X-zL-aeR"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNB-86-H4o">
+                    <rect key="frame" x="8" y="8" width="279" height="58"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Please choose" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-f2-On2">
+                    <rect key="frame" x="295" y="26.5" width="111" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wGv-f2-On2" firstAttribute="centerY" secondItem="TNB-86-H4o" secondAttribute="centerY" id="2yh-3N-Cf5"/>
+                <constraint firstItem="RMB-GG-Wht" firstAttribute="top" secondItem="TNB-86-H4o" secondAttribute="bottom" constant="16" id="9cW-3b-GOe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wGv-f2-On2" secondAttribute="trailing" constant="8" id="JBr-qQ-ius"/>
+                <constraint firstItem="TNB-86-H4o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Or2-8v-Ydb"/>
+                <constraint firstAttribute="bottom" secondItem="RMB-GG-Wht" secondAttribute="bottom" id="Qcl-X1-3oC"/>
+                <constraint firstItem="wGv-f2-On2" firstAttribute="leading" secondItem="TNB-86-H4o" secondAttribute="trailing" constant="8" id="aFl-P7-vYc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RMB-GG-Wht" secondAttribute="trailing" constant="8" id="hjE-dO-p4J"/>
+                <constraint firstItem="RMB-GG-Wht" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="tEd-XW-3Qb"/>
+                <constraint firstItem="TNB-86-H4o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="zB7-um-ulb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="278.90625"/>
+        </view>
+    </objects>
+</document>
