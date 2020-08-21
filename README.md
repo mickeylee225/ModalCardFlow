@@ -1,7 +1,21 @@
 # ModalCardFlow
+[![Generic badge](https://img.shields.io/cocoapods/v/ModalCardFlow?color=orange)](https://cocoapods.org/pods/ModalCardFlow)
+
+
 A Swift library allows any view controllers are able to start the flow of card views and pass context within flow.
 
 ![](demo.gif)
+
+## Installation
+You want to add pod `'ModalCardFlow', '~> 1.0'` similar to the following to your Podfile:
+
+```
+target 'MyApp' do
+  pod 'ModalCardFlow', '~> 1.0'
+end
+```
+
+Then run a `pod install` inside your terminal.
 
 ## Usage
 1. Create  a context class and conform it to the protocol `Context`.
