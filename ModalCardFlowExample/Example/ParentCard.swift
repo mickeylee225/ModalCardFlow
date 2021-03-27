@@ -9,7 +9,7 @@
 import UIKit
 import ModalCardFlow
 
-class ParentCard: ModalCard<ExampleContext> {
+final class ParentCard: ModalCard<ExampleContext> {
 
     @IBOutlet weak var quantityLabel: UILabel!
 

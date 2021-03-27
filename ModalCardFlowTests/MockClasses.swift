@@ -9,9 +9,9 @@
 import UIKit
 @testable import ModalCardFlow
 
-class ParentCard: ModalCard<MockContext> { }
+final class ParentCard: ModalCard<MockContext> { }
 
-class ChildCard: ModalCard<MockContext>, UITextFieldDelegate {
+final class ChildCard: ModalCard<MockContext>, UITextFieldDelegate {
 
     var textField: UITextField?
 
@@ -31,7 +31,7 @@ class ChildCard: ModalCard<MockContext>, UITextFieldDelegate {
     }
 }
 
-class MockContext: Context {
+final class MockContext: Context {
 
     var someValue: String?
 
@@ -44,7 +44,7 @@ class MockContext: Context {
     }
 }
 
-class MockContainer: UIViewController, ModalCardFlowContaining {
+final class MockContainer: UIViewController, ModalCardFlowContaining {
 
     var didAddCardToContainer: Bool = false
     var didAnimate: Bool = false
@@ -60,7 +60,7 @@ class MockContainer: UIViewController, ModalCardFlowContaining {
     }
 }
 
-class MockClosingHandler: ModalCardFlowClosable {
+final class MockClosingHandler: ModalCardFlowClosable {
 
     var didCloseFlow: Bool = false
 
@@ -69,7 +69,7 @@ class MockClosingHandler: ModalCardFlowClosable {
     }
 }
 
-class MockNotificationCenter: NotificationCenter {
+final class MockNotificationCenter: NotificationCenter {
 
     var didAddObserver: Bool = false
     var didRemoveObserver: Bool = false
@@ -89,12 +89,12 @@ class MockNotificationCenter: NotificationCenter {
     }
 }
 
-class MockUIPanGestureRecognizer: UIPanGestureRecognizer {
+final class MockUIPanGestureRecognizer: UIPanGestureRecognizer {
 
     let target: Any?
     let action: Selector?
     var gestureState: UIGestureRecognizer.State?
-    var gestureLocation: CGPoint?
+    var gestureTranslation: CGPoint?
 
     override init(target: Any?, action: Selector?) {
         self.target = target
@@ -102,35 +102,28 @@ class MockUIPanGestureRecognizer: UIPanGestureRecognizer {
         super.init(target: target, action: action)
     }
 
-    override func location(in view: UIView?) -> CGPoint {
-        if let gestureLocation = gestureLocation {
-            return gestureLocation
+    override func translation(in view: UIView?) -> CGPoint {
+        if let gestureTranslation = gestureTranslation {
+            return gestureTranslation
         }
-        return super.location(in: view)
+        return super.translation(in: view)
     }
 
     override var state: UIGestureRecognizer.State {
-        get {
-            if let gestureState = gestureState {
-                return gestureState
-            }
-            return super.state
-        }
-        set {
-            self.state = newValue
-        }
+        get { gestureState ?? super.state }
+        set { _ = newValue }
     }
 
-    func pan(location: CGPoint?, state: UIGestureRecognizer.State) {
+    func pan(translation: CGPoint?, state: UIGestureRecognizer.State) {
         guard let action = action else { return }
         super.state = state
         gestureState = state
-        gestureLocation = location
-        (target as? NSObject)?.perform(action, on: Thread.current, with: self, waitUntilDone: true)
+        gestureTranslation = translation
+        (target as? NSObject)?.perform(action, on: .current, with: self, waitUntilDone: true)
     }
 }
 
-class MockViewController: UIViewController {
+final class MockViewController: UIViewController {
 
     var didPresentVC: Bool = false
 

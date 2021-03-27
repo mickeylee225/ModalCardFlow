@@ -9,8 +9,7 @@
 import XCTest
 @testable import ModalCardFlow
 
-
-class ModalCardTests: XCTestCase {
+final class ModalCardTests: XCTestCase {
 
     func test_initialiseCard_emptyVariables() {
         let sut = ParentCard()
