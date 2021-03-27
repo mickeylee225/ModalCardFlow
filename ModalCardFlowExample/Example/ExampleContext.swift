@@ -9,7 +9,7 @@
 import Foundation
 import ModalCardFlow
 
-class ExampleContext: Context {
+final class ExampleContext: Context {
 
     var quantity: Int?
 

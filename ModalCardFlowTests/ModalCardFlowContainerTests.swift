@@ -9,10 +9,10 @@
 import XCTest
 @testable import ModalCardFlow
 
-class ModalCardFlowContainerTests: XCTestCase {
+final class ModalCardFlowContainerTests: XCTestCase {
 
-    var sut: ModalCardFlowContainer!
-    var initialContainerFrame: CGRect = .zero
+    private var sut: ModalCardFlowContainer!
+    private var initialContainerFrame: CGRect = .zero
 
     override func setUp() {
         super.setUp()
@@ -49,19 +49,47 @@ class ModalCardFlowContainerTests: XCTestCase {
         XCTAssertFalse(containerGestures.contains(where: { $0 is UIPanGestureRecognizer }))
     }
 
-    func test_handleDismiss() {
+    func test_handleDismiss_beganStateDraggingUp_initialTranslationIsNotSet() {
         let mockPanGesture = MockUIPanGestureRecognizer(target: sut, action: #selector(sut.handleDismiss))
         sut.container.addGestureRecognizer(mockPanGesture)
-        mockPanGesture.pan(location: CGPoint(x: 100, y: 100), state: .began)
-        XCTAssertEqual(sut.initialTouchPoint, CGPoint(x: 100, y: 100))
-        mockPanGesture.pan(location: CGPoint(x: 100, y: 200), state: .changed)
-        XCTAssertEqual(sut.container.frame.origin.y, CGFloat(200))
-        mockPanGesture.pan(location: CGPoint(x: 100, y: 150), state: .ended)
-        XCTAssertEqual(sut.container.frame, sut.initialContainerFrame)
+        mockPanGesture.pan(translation: CGPoint(x: -100, y: -100), state: .began)
+        sut.handleDismiss(sender: .init())
+        XCTAssertEqual(sut.initialTranslation, .zero)
+    }
+
+    func test_handleDismiss_beganState_initialTranslationDidSet() {
+        let mockPanGesture = MockUIPanGestureRecognizer(target: sut, action: #selector(sut.handleDismiss))
+        sut.container.addGestureRecognizer(mockPanGesture)
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 100), state: .began)
+        XCTAssertEqual(sut.initialTranslation, CGPoint(x: 100, y: 100))
+    }
+
+    func test_handleDismiss_changedState_containerCenterUpdated() {
+        let mockPanGesture = MockUIPanGestureRecognizer(target: sut, action: #selector(sut.handleDismiss))
+        sut.container.addGestureRecognizer(mockPanGesture)
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 200), state: .changed)
+        XCTAssertEqual(sut.container.center.y, 200)
+    }
+
+    func test_handleDismiss_endedState_largerTranslationEnoughToClose() {
+        let mockPanGesture = MockUIPanGestureRecognizer(target: sut, action: #selector(sut.handleDismiss))
+        sut.container.addGestureRecognizer(mockPanGesture)
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 100), state: .began)
         let mockDelegate = MockClosingHandler()
         sut.closingHandler = mockDelegate
-        mockPanGesture.pan(location: CGPoint(x: 100, y: 300), state: .ended)
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 300), state: .ended)
         XCTAssertTrue(mockDelegate.didCloseFlow)
+    }
+
+    func test_handleDismiss_endedState_lessTranslationToBackToOriginalFrame() {
+        let mockPanGesture = MockUIPanGestureRecognizer(target: sut, action: #selector(sut.handleDismiss))
+        sut.container.addGestureRecognizer(mockPanGesture)
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 100), state: .began)
+        let mockDelegate = MockClosingHandler()
+        sut.closingHandler = mockDelegate
+        mockPanGesture.pan(translation: CGPoint(x: 100, y: 120), state: .ended)
+        XCTAssertFalse(mockDelegate.didCloseFlow)
+        XCTAssertEqual(sut.container.center, sut.initialContainerCenter)
     }
 
     func test_addKeyboardObservers() {
@@ -96,7 +124,7 @@ class ModalCardFlowContainerTests: XCTestCase {
             XCTAssertEqual(self.sut.cardContainer.alpha, 1)
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.5)
+        wait(for: [expectation], timeout: 0.2)
     }
 
     func test_animate_fadeOut() {
@@ -105,7 +133,7 @@ class ModalCardFlowContainerTests: XCTestCase {
             XCTAssertEqual(self.sut.cardContainer.alpha, 0)
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.5)
+        wait(for: [expectation], timeout: 0.2)
     }
 
     func test_animate_slideIn() {
@@ -116,7 +144,7 @@ class ModalCardFlowContainerTests: XCTestCase {
             XCTAssertEqual(self.sut.container.frame, self.initialContainerFrame)
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.5)
+        wait(for: [expectation], timeout: 0.2)
     }
 
     func test_animate_slideOut() {
@@ -125,7 +153,7 @@ class ModalCardFlowContainerTests: XCTestCase {
             XCTAssertNotEqual(self.sut.container.frame, self.initialContainerFrame)
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.5)
+        wait(for: [expectation], timeout: 0.2)
     }
 
     func test_dismissContainer() {
