@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ModalCardFlow"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A Swift library to setup card views and the card view flow"
 
   # This description is used to generate tags and improve search results.
@@ -62,8 +62,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
-  # spec.platform     = :ios, "12.0"
+  spec.platform       = :ios, "12.0"
+  spec.swift_versions = "5.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/michilin/ModalCardFlow.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/michilin/ModalCardFlow.git", :branch => 'master', :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,10 +89,15 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ModalCardFlow/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
-  spec.public_header_files = "ModalCardFlow/**/*.h"
-
+  spec.source_files = [
+    'ModalCardFlow/*.swift',
+    'ModalCardFlow/ModalCardFlow.h',
+    'ModalCardFlow/*.xib'
+  ]
+  spec.exclude_files = [
+    'ModalCardFlowTests/*',
+    'ModalCardFlowExample/*'
+  ]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
