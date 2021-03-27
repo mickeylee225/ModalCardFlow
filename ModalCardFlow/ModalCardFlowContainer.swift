@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
+final class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
 
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var container: UIView!
@@ -20,13 +20,9 @@ class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
     private var config: ModalCardConfig?
     private var notificationCenter: NotificationCenter?
 
-    private var _initialTouchPoint: CGPoint = .zero
-    private var _initialContainerFrame: CGRect = .zero
-    private var _isKeyboardShowing: Bool = false
-
-    var initialTouchPoint: CGPoint { _initialTouchPoint }
-    var initialContainerFrame: CGRect { _initialContainerFrame }
-    var isKeyboardShowing: Bool { _isKeyboardShowing }
+    private(set) var initialTranslation: CGPoint = .zero
+    private(set) var initialContainerCenter: CGPoint = .zero
+    private(set) var isKeyboardShowing: Bool = false
 
     convenience init(notificationCenter: NotificationCenter, config: ModalCardConfig) {
         self.init(nibName: String(describing: ModalCardFlowContainer.self), bundle: Bundle(identifier: "com.mickeylee.ModalCardFlow"))
@@ -63,23 +59,21 @@ class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
     }
 
     @objc func handleDismiss(sender: UIPanGestureRecognizer) {
-        guard !_isKeyboardShowing else { return }
-        let touchPoint = sender.location(in: view?.window)
+        let translation = sender.translation(in: container)
+        guard !isKeyboardShowing, translation.y > initialTranslation.y else { return }
         switch sender.state {
         case .began:
-            _initialTouchPoint = touchPoint
-            _initialContainerFrame = container.frame
+            initialTranslation = translation
+            initialContainerCenter = container.center
+            container.translatesAutoresizingMaskIntoConstraints = true
         case .changed:
-            if touchPoint.y - _initialTouchPoint.y > 0 {
-                container.frame = CGRect(x: container.frame.origin.x, y: touchPoint.y, width: container.frame.width, height: container.frame.height)
-            }
+            container.center = CGPoint(x: initialContainerCenter.x, y: initialContainerCenter.y + translation.y)
         case .ended, .cancelled:
-            if (touchPoint.y - _initialTouchPoint.y) > (container.frame.height / 2) {
+            // Moving downward from the start point more than 100 closes the flow
+            if translation.y - initialTranslation.y > 100 {
                 dismissContainer()
             } else {
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.container.frame = self.initialContainerFrame
-                })
+                container.center = initialContainerCenter
             }
         default:
             break
@@ -96,12 +90,12 @@ class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
                 else {
                     return
             }
-            self?._isKeyboardShowing = true
+            self?.isKeyboardShowing = true
             self?.updateCardView(keyboardHeight: keyboardSize.cgRectValue.height, duration: duration.doubleValue)
         }
         _ = notificationCenter?.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { [weak self] notification in
             guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber else { return }
-            self?._isKeyboardShowing = false
+            self?.isKeyboardShowing = false
             self?.updateCardView(keyboardHeight: nil, duration: duration.doubleValue)
         }
     }
@@ -150,16 +144,26 @@ class ModalCardFlowContainer: UIViewController, ModalCardFlowContaining {
                 completion?()
             })
         case .slide(let slideIn):
-            let prevFrame = container.frame
-            let prevAlpha: CGFloat = slideIn ? 0 : 1
-            dimView.alpha = prevAlpha
-            container.frame.origin.y = slideIn ? prevFrame.origin.y + container.frame.height : prevFrame.origin.y
-            UIView.animate(withDuration: 0.4, animations: {
-                self.dimView.alpha = slideIn ? 1 : 0
-                self.container.frame.origin.y = slideIn ? prevFrame.origin.y : prevFrame.origin.y + self.container.frame.height
-            }, completion: { _ in
-                completion?()
-            })
+            if slideIn {
+                let prevFrame = container.frame
+                dimView.alpha = 0
+                container.frame.origin.y += container.frame.height
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.dimView.alpha = 1
+                    self.container.frame.origin.y = prevFrame.origin.y
+                }, completion: { _ in
+                    completion?()
+                })
+            } else {
+                dimView.alpha = 1
+                container.translatesAutoresizingMaskIntoConstraints = true
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.dimView.alpha = 0
+                    self.container.center.y += self.container.frame.height
+                }, completion: { _ in
+                    completion?()
+                })
+            }
         }
     }
 

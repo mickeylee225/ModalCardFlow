@@ -9,10 +9,10 @@
 import XCTest
 @testable import ModalCardFlow
 
-class ModalCardFlowTests: XCTestCase {
+final class ModalCardFlowTests: XCTestCase {
     
-    var sut: ModalCardFlow<MockContext>!
-    var container = MockContainer()
+    private var sut: ModalCardFlow<MockContext>!
+    private var container = MockContainer()
     
     override func setUp() {
         super.setUp()

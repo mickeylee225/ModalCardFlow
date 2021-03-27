@@ -9,7 +9,7 @@
 import UIKit
 import ModalCardFlow
 
-class ChildCard: ModalCard<ExampleContext> {
+final class ChildCard: ModalCard<ExampleContext> {
 
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var textField: UITextField!

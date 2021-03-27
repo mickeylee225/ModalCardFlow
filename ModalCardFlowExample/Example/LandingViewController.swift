@@ -9,7 +9,7 @@
 import UIKit
 import ModalCardFlow
 
-class LandingViewController: UIViewController {
+final class LandingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
